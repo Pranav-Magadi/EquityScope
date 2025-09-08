@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "source": "Aswath Damodaran (NYU Stern) - Data Sets",
+    "url": "https://pages.stern.nyu.edu/~adamodar/",
+    "last_updated": "2025-01-01",
+    "notes": "Based on Damodaran's Cost of Capital by Sector and Country Risk Premium data"
+  },
+  "india": {
+    "country_risk_premium": 0.0485,
+    "equity_risk_premium": 0.085,
+    "risk_free_rate_source": "10-Year Indian G-Sec",
+    "default_tax_rate": 0.25
+  },
+  "sectors": {
+    "Software (System & Application)": {
+      "damodaran_name": "Software (System & Application)",
+      "local_names": ["IT", "Software", "Technology"],
+      "unlevered_beta": 1.05,
+      "levered_beta": 1.15,
+      "effective_tax_rate": 0.22,
+      "terminal_growth_rate": 0.035,
+      "typical_debt_equity_ratio": 0.15,
+      "industry_multiples": {
+        "pe_ratio": 22.0,
+        "ev_ebitda": 14.0,
+        "price_to_book": 4.5
+      }
+    },
+    "Banks (Regional)": {
+      "damodaran_name": "Banks (Regional)",
+      "local_names": ["BFSI", "Banking", "Financial Services"],
+      "unlevered_beta": 0.70,
+      "levered_beta": 0.85,
+      "effective_tax_rate": 0.25,
+      "terminal_growth_rate": 0.030,
+      "typical_debt_equity_ratio": 6.5,
+      "industry_multiples": {
+        "pe_ratio": 12.0,
+        "ev_ebitda": 2.5,
+        "price_to_book": 1.2
+      }
+    },
+    "Drugs (Pharmaceutical)": {
+      "damodaran_name": "Drugs (Pharmaceutical)",
+      "local_names": ["PHARMA", "Pharmaceutical", "Healthcare"],
+      "unlevered_beta": 0.85,
+      "levered_beta": 0.95,
+      "effective_tax_rate": 0.22,
+      "terminal_growth_rate": 0.030,
+      "typical_debt_equity_ratio": 0.25,
+      "industry_multiples": {
+        "pe_ratio": 18.0,
+        "ev_ebitda": 12.0,
+        "price_to_book": 2.8
+      }
+    },
+    "Food Processing": {
+      "damodaran_name": "Food Processing",
+      "local_names": ["FMCG", "Consumer Goods", "Food & Beverages"],
+      "unlevered_beta": 0.75,
+      "levered_beta": 0.85,
+      "effective_tax_rate": 0.25,
+      "terminal_growth_rate": 0.030,
+      "typical_debt_equity_ratio": 0.30,
+      "industry_multiples": {
+        "pe_ratio": 35.0,
+        "ev_ebitda": 18.0,
+        "price_to_book": 6.0
+      }
+    },
+    "Real Estate (Development)": {
+      "damodaran_name": "Real Estate (Development)",
+      "local_names": ["REAL ESTATE", "Realty", "Construction"],
+      "unlevered_beta": 1.20,
+      "levered_beta": 1.50,
+      "effective_tax_rate": 0.25,
+      "terminal_growth_rate": 0.025,
+      "typical_debt_equity_ratio": 1.8,
+      "industry_multiples": {
+        "pe_ratio": 8.0,
+        "ev_ebitda": 6.0,
+        "price_to_book": 0.8
+      }
+    },
+    "Oil/Gas (Integrated)": {
+      "damodaran_name": "Oil/Gas (Integrated)",
+      "local_names": ["ENERGY", "Oil & Gas", "Petroleum"],
+      "unlevered_beta": 1.10,
+      "levered_beta": 1.25,
+      "effective_tax_rate": 0.30,
+      "terminal_growth_rate": 0.020,
+      "typical_debt_equity_ratio": 0.45,
+      "industry_multiples": {
+        "pe_ratio": 10.0,
+        "ev_ebitda": 8.0,
+        "price_to_book": 1.1
+      }
+    },
+    "Telecom (Wireless)": {
+      "damodaran_name": "Telecom (Wireless)",
+      "local_names": ["TELECOM", "Telecommunications"],
+      "unlevered_beta": 0.95,
+      "levered_beta": 1.10,
+      "effective_tax_rate": 0.25,
+      "terminal_growth_rate": 0.025,
+      "typical_debt_equity_ratio": 0.65,
+      "industry_multiples": {
+        "pe_ratio": 15.0,
+        "ev_ebitda": 9.0,
+        "price_to_book": 1.8
+      }
+    },
+    "Auto & Truck": {
+      "damodaran_name": "Auto & Truck",
+      "local_names": ["AUTO", "Automotive", "Automobile"],
+      "unlevered_beta": 1.25,
+      "levered_beta": 1.45,
+      "effective_tax_rate": 0.25,
+      "terminal_growth_rate": 0.025,
+      "typical_debt_equity_ratio": 0.40,
+      "industry_multiples": {
+        "pe_ratio": 14.0,
+        "ev_ebitda": 7.5,
+        "price_to_book": 1.5
+      }
+    }
+  },
+  "risk_free_rate": {
+    "source": "Reserve Bank of India",
+    "instrument": "10-Year Government Bond",
+    "api_endpoint": "https://api.rbi.org.in/",
+    "fallback_rate": 0.065,
+    "notes": "Fetched live from RBI or financial data providers"
+  }
+}

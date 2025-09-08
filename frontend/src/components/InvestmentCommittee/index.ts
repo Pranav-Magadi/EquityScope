@@ -1,0 +1,1 @@
+export { AIInvestmentCommittee } from './AIInvestmentCommittee';
