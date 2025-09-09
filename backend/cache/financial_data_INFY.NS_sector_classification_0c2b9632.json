@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-09-09T12:49:56.083293",
+  "cache_type": "financial_data",
+  "identifier": "INFY.NS_sector_classification",
+  "data": {
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "primary_sector": "SectorCategory.IT",
+    "sub_industry": "IT Services",
+    "industry_group": "Information Technology Services",
+    "business_segments": [
+      {
+        "sector": "SectorCategory.IT",
+        "sub_industry": "IT Services",
+        "estimated_revenue_contribution": 29.097963142580024,
+        "confidence_level": 61.33333333333333,
+        "keywords_found": [
+          "technology",
+          "digital",
+          "platform",
+          "tech"
+        ]
+      },
+      {
+        "sector": "SectorCategory.BFSI",
+        "sub_industry": "NBFCs",
+        "estimated_revenue_contribution": 26.77012609117362,
+        "confidence_level": 36.0,
+        "keywords_found": [
+          "financial",
+          "banking",
+          "insurance"
+        ]
+      },
+      {
+        "sector": "SectorCategory.FMCG",
+        "sub_industry": "Personal Care",
+        "estimated_revenue_contribution": 23.763336566440348,
+        "confidence_level": 20.0,
+        "keywords_found": [
+          "retail",
+          "consumer"
+        ]
+      },
+      {
+        "sector": "SectorCategory.ENERGY",
+        "sub_industry": "Oil & Gas Exploration",
+        "estimated_revenue_contribution": 20.368574199806016,
+        "confidence_level": 25.71428571428571,
+        "keywords_found": [
+          "oil",
+          "gas",
+          "energy"
+        ]
+      }
+    ],
+    "is_conglomerate": true,
+    "classification_confidence": 51.111111111111114,
+    "business_keywords": [
+      "technology",
+      "bank",
+      "manufacturing",
+      "retail",
+      "healthcare",
+      "insurance",
+      "construction",
+      "energy",
+      "chemical",
+      "consumer"
+    ],
+    "revenue_segments": [
+      "energy transition",
+      "service experience transformation",
+      "application and cloud business"
+    ],
+    "market_cap_category": "Mid Cap",
+    "listing_exchange": "NSE",
+    "direct_peers": [],
+    "sector_peers": [],
+    "data_sources": [
+      "yfinance",
+      "business_analysis"
+    ],
+    "classification_date": "2025-09-09 12:49:56.083180",
+    "last_updated": "2025-09-09 12:49:56.083182"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_INFY.NS_sector_classification_0c2b9632"
+  }
+}

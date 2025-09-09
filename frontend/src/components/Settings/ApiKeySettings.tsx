@@ -7,8 +7,6 @@ interface ApiKeyConfig {
   kite_api_secret: string;
   kite_access_token?: string;
   claude_api_key?: string;
-  perplexity_api_key?: string;
-  openai_api_key?: string;
 }
 
 interface ApiKeySettingsProps {
@@ -22,18 +20,14 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({ isOpen, onClose, onSave
     kite_api_key: '',
     kite_api_secret: '',
     kite_access_token: '',
-    claude_api_key: '',
-    perplexity_api_key: '',
-    openai_api_key: ''
+    claude_api_key: ''
   });
 
   const [showKeys, setShowKeys] = useState({
     kite_api_key: false,
     kite_api_secret: false,
     kite_access_token: false,
-    claude_api_key: false,
-    perplexity_api_key: false,
-    openai_api_key: false
+    claude_api_key: false
   });
 
   const [validationStatus, setValidationStatus] = useState<{
@@ -85,9 +79,6 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({ isOpen, onClose, onSave
           break;
         case 'kite_api_secret':
           isValid = value.length >= 20; // Basic length check
-          break;
-        case 'openai_api_key':
-          isValid = value.startsWith('sk-'); // OpenAI format
           break;
         default:
           isValid = value.length > 0;
@@ -337,87 +328,6 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({ isOpen, onClose, onSave
                 </div>
               </div>
 
-              {/* Perplexity API Key */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium text-white">Perplexity API</h3>
-                  <span className="px-2 py-1 bg-indigo-600 text-white text-xs rounded-full">AI Research</span>
-                  <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full">Alternative</span>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-slate-300">API Key</label>
-                  <div className="relative">
-                    <input
-                      type={showKeys.perplexity_api_key ? 'text' : 'password'}
-                      value={config.perplexity_api_key}
-                      onChange={(e) => handleInputChange('perplexity_api_key', e.target.value)}
-                      onBlur={(e) => validateApiKey('perplexity_api_key', e.target.value)}
-                      placeholder="pplx-... (alternative to Claude for AI analysis)"
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent pr-20"
-                    />
-                    <div className="absolute inset-y-0 right-0 flex items-center space-x-1 pr-3">
-                      {getValidationIcon('perplexity_api_key')}
-                      <button
-                        type="button"
-                        onClick={() => toggleKeyVisibility('perplexity_api_key')}
-                        className="p-1 hover:bg-slate-600 rounded transition-colors"
-                      >
-                        {showKeys.perplexity_api_key ? (
-                          <EyeOff className="h-4 w-4 text-slate-400" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-slate-400" />
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                  <p className="text-xs text-slate-500">
-                    Alternative AI provider for enhanced research and analysis capabilities
-                  </p>
-                </div>
-              </div>
-
-              {/* OpenAI API Key (Future Enhancement) */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium text-white">OpenAI API</h3>
-                  <span className="px-2 py-1 bg-purple-600 text-white text-xs rounded-full">AI Analysis</span>
-                  <span className="px-2 py-1 bg-slate-600 text-slate-300 text-xs rounded-full">Coming Soon</span>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-slate-300">API Key</label>
-                  <div className="relative">
-                    <input
-                      type={showKeys.openai_api_key ? 'text' : 'password'}
-                      value={config.openai_api_key}
-                      onChange={(e) => handleInputChange('openai_api_key', e.target.value)}
-                      onBlur={(e) => validateApiKey('openai_api_key', e.target.value)}
-                      placeholder="sk-... (for enhanced AI analysis)"
-                      disabled={true}
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent pr-20 disabled:opacity-50 disabled:cursor-not-allowed"
-                    />
-                    <div className="absolute inset-y-0 right-0 flex items-center space-x-1 pr-3">
-                      {getValidationIcon('openai_api_key')}
-                      <button
-                        type="button"
-                        onClick={() => toggleKeyVisibility('openai_api_key')}
-                        disabled={true}
-                        className="p-1 hover:bg-slate-600 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {showKeys.openai_api_key ? (
-                          <EyeOff className="h-4 w-4 text-slate-400" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-slate-400" />
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                  <p className="text-xs text-slate-500">
-                    Future enhancement for advanced qualitative analysis
-                  </p>
-                </div>
-              </div>
 
               {/* Instructions */}
               <div className="bg-blue-900/20 border border-blue-700/30 rounded-lg p-4">
@@ -425,8 +335,6 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({ isOpen, onClose, onSave
                 <ul className="text-xs text-blue-200 space-y-1">
                   <li>• <strong>Kite Connect:</strong> Visit <a href="https://kite.trade" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-100">kite.trade</a> → Developer Console → Create App</li>
                   <li>• <strong>Claude:</strong> Visit <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-100">console.anthropic.com</a> → API Keys → Create Key</li>
-                  <li>• <strong>Perplexity:</strong> Visit <a href="https://www.perplexity.ai/settings/api" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-100">perplexity.ai/settings/api</a> → Generate API Key</li>
-                  <li>• <strong>OpenAI:</strong> Visit <a href="https://platform.openai.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-100">platform.openai.com</a> → API Keys (Coming Soon)</li>
                 </ul>
               </div>
             </div>

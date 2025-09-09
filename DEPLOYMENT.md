@@ -42,8 +42,27 @@ KITE_API_SECRET=your_kite_api_secret
 ```
 
 ### API Key Setup
-1. **Claude AI**: Get from https://console.anthropic.com/
-2. **Kite Connect**: Register at https://kite.trade/
+
+**Important**: For v3.1.0+, API keys must be configured through the application's Settings panel, not environment variables.
+
+#### In-App Configuration (Recommended):
+1. Launch the application using any method above
+2. Navigate to Settings (⚙️ icon) in the top navigation
+3. Configure API keys:
+   - **Claude API Key**: Get from https://console.anthropic.com/
+   - **Kite Connect**: Register at https://kite.trade/
+4. Click "Save Configuration"
+5. Page will refresh automatically to apply settings
+
+#### Environment Variables (Fallback):
+If you prefer environment variables, create `backend/.env`:
+```env
+ANTHROPIC_API_KEY=your_claude_api_key
+KITE_API_KEY=your_kite_api_key
+KITE_API_SECRET=your_kite_api_secret
+```
+
+**Note**: In-app configuration takes precedence over environment variables.
 
 ## 🌐 Production Deployment
 

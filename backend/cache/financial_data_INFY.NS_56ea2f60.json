@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-09T12:35:50.866959",
+  "cache_type": "financial_data",
+  "identifier": "INFY.NS",
+  "data": {
+    "ticker": "INFY.NS",
+    "sector": "IT",
+    "fair_value": 859.6422531032974,
+    "current_price": 1498.8,
+    "upside_downside_pct": -42.64463216551258,
+    "dcf_method": "Generic_DCF",
+    "confidence": 0.6,
+    "sector_rules": {
+      "red_flags": {
+        "revenue_growth_low": 5.0,
+        "margin_compression": -2.0,
+        "client_concentration_high": 30.0,
+        "utilization_low": 75.0
+      },
+      "positive_signals": {
+        "revenue_growth_good": 15.0,
+        "margin_expansion": 1.0,
+        "digital_revenue_high": 60.0,
+        "client_mining_good": 5.0
+      }
+    },
+    "calculation_timestamp": "2025-09-09T12:35:50.866933"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_INFY.NS_56ea2f60",
+    "sector": "IT",
+    "mode": "simple",
+    "calculation_type": "sector_dcf"
+  }
+}

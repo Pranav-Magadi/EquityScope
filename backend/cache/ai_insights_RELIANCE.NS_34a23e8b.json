@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-09-09T13:17:05.843364",
+  "cache_type": "ai_insights",
+  "identifier": "RELIANCE.NS",
+  "data": {
+    "investment_thesis_summary": "Reliance Industries is a diversified energy conglomerate with strong growth prospects in its petrochemicals, retail, and digital services businesses. The current valuation presents an attractive upside opportunity.",
+    "industry_macro_signals": "The energy sector is benefiting from rising global demand and tight supply, supporting higher commodity prices and refining margins. India's growing economy and rising middle class also provide favorable tailwinds for Reliance's consumer-facing businesses.",
+    "ai_diagnostic_commentary": "The provided assumptions appear reasonable, with the WACC and growth rates in line with our analysis. We would revise the terminal growth rate to 4% to account for potential long-term industry headwinds, resulting in a revised fair value of \u20b91,585.",
+    "smart_risk_flags": [
+      "Regulatory changes in the energy and telecom sectors",
+      "Volatility in global oil and gas prices"
+    ],
+    "revised_fair_value": "\u20b91,585 (conservative scenario)",
+    "key_catalysts": [
+      "Continued ramp-up of the Jio digital services platform",
+      "Expansion of the retail and consumer businesses"
+    ],
+    "confidence_score": 0.7,
+    "generated_at": "2025-09-09T13:17:05.843275",
+    "model_used": "claude-3-haiku-20240307",
+    "token_usage": {
+      "tokens": 142,
+      "cost": 0.0
+    }
+  },
+  "metadata": {
+    "ttl_hours": 6.0,
+    "cache_key": "ai_insights_RELIANCE.NS_34a23e8b",
+    "dcf_hash": "dcf_insights_RELIANCE.NS_-7137539777182061860",
+    "fair_value": 1647.4334697002375
+  }
+}

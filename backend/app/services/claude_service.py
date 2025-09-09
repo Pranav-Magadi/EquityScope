@@ -20,20 +20,26 @@ class ClaudeService:
         self._setup_company_references()
     
     def _initialize_client(self):
-        """Initialize Claude client with API key."""
+        """Initialize Claude client with API key from user settings only."""
         try:
-            # Get API keys (user-provided or default)
+            # Get API keys from user settings only (no environment fallback)
             api_keys = get_user_api_keys()
-            claude_api_key = api_keys.get('claude_api_key') or os.getenv('ANTHROPIC_API_KEY')
+            claude_api_key = api_keys.get('claude_api_key')
+            
+            logger.info(f"🔍 Claude initialization - API keys retrieved: {list(api_keys.keys())}")
+            logger.info(f"🔍 Claude initialization - Claude key present: {bool(claude_api_key)}")
+            if claude_api_key:
+                logger.info(f"🔍 Claude initialization - Key length: {len(claude_api_key)}")
             
             if claude_api_key:
                 self.client = Anthropic(api_key=claude_api_key)
-                logger.info("Claude client initialized successfully")
+                logger.info("✅ Claude client initialized successfully with user-provided key")
             else:
-                logger.warning("Claude API key not found - some features will be disabled")
+                logger.warning("❌ Claude API key not configured in settings panel - AI features disabled")
+                self.client = None
                 
         except Exception as e:
-            logger.error(f"Failed to initialize Claude client: {e}")
+            logger.error(f"❌ Failed to initialize Claude client: {e}")
             self.client = None
     
     def _setup_company_references(self):
@@ -108,6 +114,10 @@ When analyzing this company, consider:
         
         return context
     
+    def reinitialize_client(self):
+        """Reinitialize Claude client with updated API keys."""
+        self._initialize_client()
+    
     def is_available(self) -> bool:
         """Check if Claude service is available."""
         return self.client is not None
@@ -118,7 +128,7 @@ When analyzing this company, consider:
         system_prompt: Optional[str] = None,
         max_tokens: int = 4000,
         temperature: float = 0.3,
-        model: str = "claude-3-5-sonnet-20241022"
+        model: str = "claude-3-haiku-20240307"  # Updated to available model
     ) -> Optional[str]:
         """Generate a completion using Claude."""
         if not self.client:
@@ -585,12 +595,13 @@ Provide a conservative bear case following the exact JSON structure specified.
             logger.error(f"Error in bear_commentator_agent: {e}")
             return None
     
-    async def technical_analyst_agent(self, indicator_values: Dict[str, Any]) -> Optional[str]:
+    async def technical_analyst_agent(self, indicator_values: Dict[str, Any], ticker: str = "") -> Optional[str]:
         """
         Technical Analyst Agent: Provides commentary on technical indicators
         
         Args:
             indicator_values: Dictionary containing calculated technical indicator values
+            ticker: Stock ticker symbol for currency formatting
             
         Returns:
             Technical analysis summary as a string

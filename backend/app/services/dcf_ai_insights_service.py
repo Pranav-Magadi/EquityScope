@@ -18,7 +18,7 @@ class DCFAIInsightsService:
     """Service for generating AI insights about DCF valuations"""
     
     def __init__(self):
-        self.claude_service = ClaudeService()
+        self.claude_service = None
     
     async def generate_dcf_insights(
         self,
@@ -70,6 +70,9 @@ class DCFAIInsightsService:
                 assumptions=assumptions,
                 company_data=company_data
             )
+            
+            # Initialize or reinitialize Claude service to get latest API keys
+            self.claude_service = ClaudeService()
             
             # Check if Claude service is available first
             if not self.claude_service.is_available():

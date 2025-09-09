@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-09T11:34:02.365445",
+  "cache_type": "financial_data",
+  "identifier": "RELIANCE",
+  "data": {
+    "ticker": "RELIANCE",
+    "sector": "ENERGY",
+    "fair_value": 0,
+    "current_price": 1373.5,
+    "upside_downside_pct": 0.0,
+    "dcf_method": "Generic_DCF_Insufficient_Data",
+    "confidence": 0.3,
+    "sector_rules": {
+      "red_flags": {
+        "refining_margin_low": 5.0,
+        "inventory_losses_high": 2.0,
+        "capex_intensity_high": 15.0,
+        "debt_equity_high": 1.2
+      },
+      "positive_signals": {
+        "refining_margin_good": 8.0,
+        "marketing_margin_stable": 3.0,
+        "petrochemical_integration": 30.0,
+        "renewable_transition": 20.0
+      }
+    },
+    "calculation_timestamp": "2025-09-09T11:34:02.365419"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_RELIANCE_e119e191",
+    "sector": "ENERGY",
+    "mode": "simple",
+    "calculation_type": "sector_dcf"
+  }
+}

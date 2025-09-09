@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-09-09T11:33:51.269840",
+  "cache_type": "ai_analysis",
+  "identifier": "TCS_agentic_comprehensive",
+  "data": {
+    "ticker": "TCS",
+    "analysis_timestamp": "2025-09-09T11:33:51.269801",
+    "cost_breakdown": {
+      "core_analysis_tokens": 0,
+      "sentiment_tokens": 0,
+      "estimated_cost": 0.0
+    },
+    "investment_thesis": "Analysis based on quantitative metrics and historical performance",
+    "dcf_commentary": [
+      "Growth assumptions based on historical CAGR analysis",
+      "Fair value calculated using sector-appropriate DCF methodology",
+      "Key risks include market volatility and sector-specific challenges"
+    ],
+    "financial_health": [
+      "Revenue trends analyzed over 3-5 year period",
+      "Profitability metrics compared to sector averages",
+      "Balance sheet strength assessed using debt and liquidity ratios"
+    ],
+    "technical_outlook": [
+      "Technical indicators suggest current market positioning",
+      "Entry timing considerations based on momentum signals"
+    ],
+    "news_sentiment": {
+      "overall_tone": "Mixed",
+      "key_themes": [
+        "Limited recent news analysis available",
+        "Sentiment assessment based on market performance"
+      ],
+      "insider_activity": "No significant insider activity detected"
+    },
+    "peer_context": [
+      "Peer comparison based on quantitative metrics",
+      "Competitive positioning assessed using financial ratios"
+    ],
+    "analysis_quality": "high",
+    "model_version": "claude-3-haiku"
+  },
+  "metadata": {
+    "ttl_hours": 6,
+    "cache_key": "ai_analysis_TCS_agentic_comprehensive_f6e5fdd2"
+  }
+}

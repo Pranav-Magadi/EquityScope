@@ -1,0 +1,133 @@
+{
+  "timestamp": "2025-09-09T12:51:44.210773",
+  "cache_type": "financial_data",
+  "identifier": "INFY.NS_blended_valuation",
+  "data": {
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "is_conglomerate": true,
+    "segment_valuations": [
+      {
+        "business_segment": {
+          "sector": "SectorCategory.IT",
+          "sub_industry": "IT Services",
+          "estimated_revenue_contribution": 29.097963142580024,
+          "confidence_level": 61.33333333333333,
+          "keywords_found": [
+            "technology",
+            "digital",
+            "platform",
+            "tech"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 13284934637.350489,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      },
+      {
+        "business_segment": {
+          "sector": "SectorCategory.BFSI",
+          "sub_industry": "NBFCs",
+          "estimated_revenue_contribution": 26.77012609117362,
+          "confidence_level": 36.0,
+          "keywords_found": [
+            "financial",
+            "banking",
+            "insurance"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 11578869347.080214,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      },
+      {
+        "business_segment": {
+          "sector": "SectorCategory.FMCG",
+          "sub_industry": "Personal Care",
+          "estimated_revenue_contribution": 23.763336566440348,
+          "confidence_level": 20.0,
+          "keywords_found": [
+            "retail",
+            "consumer"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 10278344166.79222,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      },
+      {
+        "business_segment": {
+          "sector": "SectorCategory.ENERGY",
+          "sub_industry": "Oil & Gas Exploration",
+          "estimated_revenue_contribution": 20.368574199806016,
+          "confidence_level": 25.71428571428571,
+          "keywords_found": [
+            "oil",
+            "gas",
+            "energy"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 8810009285.821905,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      }
+    ],
+    "blended_pe_multiple": 15.0,
+    "blended_ev_ebitda_multiple": 9.999999999999998,
+    "pure_play_discount": 20.0,
+    "sum_of_parts_value": 43952157437.04483,
+    "discounted_sotp_value": 35161725949.635864,
+    "current_market_value": 6220421791744,
+    "valuation_gap": -99.43473727141294,
+    "valuation_confidence": 40.0,
+    "data_warnings": [],
+    "methodology_notes": [
+      "Information Technology: 29.1% contribution, using P/E Ratio approach",
+      "Banking, Financial Services & Insurance: 26.8% contribution, using P/E Ratio approach",
+      "Fast Moving Consumer Goods: 23.8% contribution, using P/E Ratio approach",
+      "Oil, Gas & Energy: 20.4% contribution, using P/E Ratio approach"
+    ],
+    "analysis_date": "2025-09-09 12:51:44.210585",
+    "last_updated": "2025-09-09 12:51:44.210587"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_INFY.NS_blended_valuation_205748c4"
+  }
+}

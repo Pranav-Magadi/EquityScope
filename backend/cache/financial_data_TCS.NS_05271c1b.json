@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-09T11:34:25.687775",
+  "cache_type": "financial_data",
+  "identifier": "TCS.NS",
+  "data": {
+    "ticker": "TCS.NS",
+    "sector": "IT",
+    "fair_value": 0,
+    "current_price": 3049.7,
+    "upside_downside_pct": 0.0,
+    "dcf_method": "Generic_DCF_Insufficient_Data",
+    "confidence": 0.3,
+    "sector_rules": {
+      "red_flags": {
+        "revenue_growth_low": 5.0,
+        "margin_compression": -2.0,
+        "client_concentration_high": 30.0,
+        "utilization_low": 75.0
+      },
+      "positive_signals": {
+        "revenue_growth_good": 15.0,
+        "margin_expansion": 1.0,
+        "digital_revenue_high": 60.0,
+        "client_mining_good": 5.0
+      }
+    },
+    "calculation_timestamp": "2025-09-09T11:34:25.687752"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_TCS.NS_05271c1b",
+    "sector": "IT",
+    "mode": "simple",
+    "calculation_type": "sector_dcf"
+  }
+}

@@ -23,7 +23,7 @@ EquityScope is a comprehensive financial analysis platform that combines AI-powe
 
 ### 🔌 **Data Sources**
 - **Primary**: Kite Connect API (real-time Indian market data)
-- **Fallback**: yfinance (global market data)
+- **Fallback**: yfinance v0.2.65 (global market data with enhanced reliability)
 - **Enhanced**: Multi-source news aggregation and sentiment analysis
 
 ### ⚡ **Performance Optimized**
@@ -83,13 +83,27 @@ npm start
 
 ## 🔧 Configuration
 
-### API Keys (Optional but Recommended)
-For enhanced AI features, configure API keys in the application settings:
+### API Keys Configuration
 
-1. **Claude API Key**: For AI-powered analysis and insights
-2. **Kite Connect API**: For real-time Indian market data
-   - API Key and Secret from Zerodha Kite Connect
+**Important**: API keys must be configured through the application's Settings panel for AI features to work properly.
+
+#### Required for AI Features:
+1. **Claude API Key**: Essential for AI-powered DCF insights, technical analysis summaries, and news sentiment analysis
+   - Get your API key from [Anthropic Console](https://console.anthropic.com/)
+   - Configure in Settings → API Keys → Claude API Key
+
+#### Optional for Enhanced Data:
+2. **Kite Connect API**: For real-time Indian market data (fallback to yfinance if not configured)
+   - API Key and Secret from [Zerodha Kite Connect](https://kite.trade/)
    - Requires HTTPS URLs for OAuth (use ngrok for local development)
+   - Configure in Settings → API Keys → Kite Connect section
+
+#### Configuration Steps:
+1. Launch the application
+2. Click the Settings (⚙️) icon in the top navigation
+3. Enter your API keys in the respective fields
+4. Click "Save Configuration"
+5. The page will refresh automatically to apply the new settings
 
 ### Environment Variables
 Create a `.env` file in the backend directory:
@@ -189,12 +203,49 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Common Issues
 
-**Port conflicts:**
-```bash
-# Kill processes on ports 3000 and 8000
-lsof -ti:3000 | xargs kill -9
-lsof -ti:8000 | xargs kill -9
-```
+**Backend server won't start:**
+- Check Python version (3.9+ required)
+- Ensure virtual environment is activated
+- Verify all dependencies are installed
+
+**Frontend build errors:**
+- Clear node_modules and reinstall
+- Check Node.js version (16+ required)
+- Ensure backend is running on port 8000
+
+**API timeout errors:**
+- Check internet connection
+- Verify API keys are configured correctly
+- Try refreshing the analysis (some operations may take time)
+
+### Recent Updates (v3.1.0)
+
+**AI Integration Fixes:**
+- ✅ Fixed Claude API key configuration and persistence
+- ✅ Resolved AI insights not displaying in DCF analysis
+- ✅ Fixed technical analysis AI summaries in agentic mode
+- ✅ Improved Claude service initialization with fresh API keys
+- ✅ Enhanced error handling for AI service timeouts
+
+**Technical Analysis Enhancements:**
+- ✅ Added mode parameter support (simple/agentic) for technical analysis
+- ✅ Fixed missing AI summary field in API responses
+- ✅ Improved currency formatting for Indian (₹) and US ($) stocks
+- ✅ Enhanced technical indicator calculations and display
+
+**Backend Improvements:**
+- ✅ Fixed Claude service reinitialization on API key updates
+- ✅ Improved settings API endpoints for better key management
+- ✅ Enhanced logging for debugging AI service issues
+- ✅ Better error handling and fallback mechanisms
+
+**Previous Updates (v3.0.1):**
+- Fixed Yahoo Finance API compatibility issues with yfinance v0.2.65
+- Improved data reliability and error handling
+- Added support for new yfinance dependencies (curl-cffi, protobuf, peewee)
+- Resolved 400/404 errors in v3 summary endpoints
+
+### Dependency Issues
 
 **Python dependencies:**
 ```bash

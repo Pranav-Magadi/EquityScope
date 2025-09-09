@@ -114,6 +114,9 @@ async def get_peer_comparison_ratios(ticker: str) -> Dict[str, Any]:
         logger.info(f"Fetching peer comparison ratios for {ticker}")
         
         # Step 1: Use dynamic sector classification for comprehensive coverage
+        classification = None
+        sector = "GENERAL"
+        
         try:
             classification = await sector_classification_service.classify_company(ticker, include_peers=False)
             sector = _safe_enum_name(classification.primary_sector)  # Get enum name (e.g., 'BFSI', 'IT')
@@ -279,7 +282,7 @@ async def get_peer_comparison_ratios(ticker: str) -> Dict[str, Any]:
                 
             except Exception as e:
                 logger.warning(f"Conglomerate analysis failed for {ticker}: {e}")
-                # Create fallback analysis
+                # Create fallback analysis using yfinance
                 import yfinance as yf
                 stock = yf.Ticker(ticker)
                 info = stock.info
@@ -317,7 +320,7 @@ async def get_peer_comparison_ratios(ticker: str) -> Dict[str, Any]:
                 peer_analysis = await peer_comparison_service.analyze_peers(ticker, sector=sector)
             except Exception as e:
                 logger.warning(f"Peer analysis failed for {ticker}: {e}")
-                # Create fallback analysis
+                # Create fallback analysis using yfinance
                 import yfinance as yf
                 stock = yf.Ticker(ticker)
                 info = stock.info
@@ -473,8 +476,6 @@ async def get_corporate_governance(ticker: str) -> Dict[str, Any]:
     except Exception as e:
         logger.error(f"Error fetching corporate governance for {ticker}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to fetch corporate governance: {str(e)}")
-
-# Additional utility endpoints
 
 @router.get("/sector-classification/{ticker}")
 async def get_sector_classification(ticker: str) -> Dict[str, Any]:

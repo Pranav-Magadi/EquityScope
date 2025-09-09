@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-09-09T11:35:02.140041",
+  "cache_type": "ai_insights",
+  "identifier": "TCS.NS",
+  "data": {
+    "headlines": [
+      "TCS.NS reports quarterly results amid general sector trends",
+      "Analysts maintain coverage on TCS.NS with sector-specific outlook",
+      "GENERAL sector dynamics impact TCS.NS performance",
+      "Market volatility affects TCS.NS amid broader general trends"
+    ],
+    "sentiment_score": -0.07704764039512745,
+    "sentiment_label": "Neutral",
+    "news_count": 4,
+    "last_updated": "2025-09-09T11:35:02.140004"
+  },
+  "metadata": {
+    "ttl_hours": 6.0,
+    "cache_key": "ai_insights_TCS.NS_e741bb10",
+    "analysis_type": "claude_sentiment"
+  }
+}

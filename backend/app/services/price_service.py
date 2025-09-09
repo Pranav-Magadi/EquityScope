@@ -4,6 +4,7 @@ from typing import Dict, Optional, Tuple
 from datetime import datetime, timedelta
 import logging
 import asyncio
+import time
 from threading import Lock
 
 logger = logging.getLogger(__name__)
@@ -18,7 +19,8 @@ class PriceService:
     _price_cache: Dict[str, Dict] = {}
     _cache_timestamps: Dict[str, datetime] = {}
     _cache_lock = Lock()
-    _cache_ttl_seconds = 60  # Cache for 1 minute
+    _cache_ttl_seconds = 300  # Cache for 5 minutes to reduce API calls
+    _last_request_time = 0
     
     @classmethod
     def get_unified_stock_data(cls, ticker: str, force_refresh: bool = False) -> Optional[Dict]:
@@ -41,6 +43,14 @@ class PriceService:
             
             try:
                 logger.info(f"Fetching fresh data for {ticker}")
+                
+                # Add delay to prevent rate limiting
+                current_time = time.time()
+                time_since_last_request = current_time - cls._last_request_time
+                if time_since_last_request < 1.0:  # Minimum 1 second between requests
+                    time.sleep(1.0 - time_since_last_request)
+                
+                cls._last_request_time = time.time()
                 
                 # Fetch data from yfinance once
                 stock = yf.Ticker(ticker)
@@ -86,6 +96,9 @@ class PriceService:
                 
             except Exception as e:
                 logger.error(f"Error fetching unified stock data for {ticker}: {e}")
+                # Check if it's a rate limiting error and re-raise with specific message
+                if "429" in str(e) or "Too Many Requests" in str(e):
+                    raise Exception(f"Data service temporarily unavailable due to rate limiting. Please try again in a few minutes.")
                 return None
     
     @classmethod

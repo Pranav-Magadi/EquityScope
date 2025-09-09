@@ -13,15 +13,11 @@ class ApiKeyConfig(BaseModel):
     kite_api_secret: Optional[str] = None
     kite_access_token: Optional[str] = None
     claude_api_key: Optional[str] = None
-    perplexity_api_key: Optional[str] = None
-    openai_api_key: Optional[str] = None
 
 class ApiKeyStatus(BaseModel):
     kite_configured: bool
     kite_authenticated: bool
     claude_configured: bool
-    perplexity_configured: bool
-    openai_configured: bool
     last_updated: Optional[str] = None
 
 # In-memory storage for user API keys (in production, use secure database)
@@ -45,20 +41,19 @@ async def update_api_keys(
         if config.kite_api_secret and len(config.kite_api_secret) < 20:
             raise HTTPException(status_code=400, detail="Invalid Kite API secret format")
         
-        if config.openai_api_key and not config.openai_api_key.startswith('sk-'):
-            raise HTTPException(status_code=400, detail="Invalid OpenAI API key format")
-        
-        # Require at least one AI API key for AI features
-        if not config.claude_api_key and not config.perplexity_api_key:
-            logger.warning("No AI API keys provided - only quantitative analysis will be available")
+        # Require Claude API key for AI features
+        if not config.claude_api_key:
+            logger.warning("No Claude API key provided - only quantitative analysis will be available")
 
         # Store configuration (in production, encrypt sensitive data)
         user_api_keys[user_id] = config
         
         logger.info(f"API keys updated for user {user_id}")
+        logger.info(f"Stored keys: {list(user_api_keys.keys())}")
+        logger.info(f"Claude key configured: {bool(config.claude_api_key)}")
         
         # Determine what features will be available
-        ai_features_enabled = bool(config.claude_api_key or config.perplexity_api_key)
+        ai_features_enabled = bool(config.claude_api_key)
         kite_features_enabled = bool(config.kite_api_key and config.kite_api_secret)
         
         return {
@@ -80,22 +75,18 @@ async def get_api_key_status(user_id: str = Depends(get_current_user_id)):
         config = user_api_keys.get(user_id)
         
         if not config:
-            # No user config - check environment variables
+            # No user config - require user to provide keys
             return ApiKeyStatus(
-                kite_configured=bool(os.getenv("KITE_API_KEY")),
-                kite_authenticated=bool(os.getenv("KITE_ACCESS_TOKEN")),
-                claude_configured=bool(os.getenv("ANTHROPIC_API_KEY")),
-                perplexity_configured=bool(os.getenv("PERPLEXITY_API_KEY")),
-                openai_configured=bool(os.getenv("OPENAI_API_KEY"))
+                kite_configured=False,
+                kite_authenticated=False,
+                claude_configured=False
             )
         else:
-            # Using user-provided keys
+            # Using user-provided keys only
             return ApiKeyStatus(
                 kite_configured=bool(config.kite_api_key and config.kite_api_secret),
                 kite_authenticated=bool(config.kite_access_token),
-                claude_configured=bool(config.claude_api_key),
-                perplexity_configured=bool(config.perplexity_api_key),
-                openai_configured=bool(config.openai_api_key)
+                claude_configured=bool(config.claude_api_key)
             )
             
     except Exception as e:
@@ -121,31 +112,31 @@ async def reset_api_keys(user_id: str = Depends(get_current_user_id)):
         raise HTTPException(status_code=500, detail="Failed to reset API keys")
 
 def get_user_api_keys(user_id: str = None) -> Dict[str, Any]:
-    """Get API keys for a user, falling back to environment variables."""
+    """Get API keys for a user - only from user settings, no environment fallback."""
     if not user_id:
         user_id = get_current_user_id()
     
     config = user_api_keys.get(user_id)
     
+    logger.info(f"Getting API keys for user {user_id}")
+    logger.info(f"Available user keys: {list(user_api_keys.keys())}")
+    logger.info(f"Config found: {config is not None}")
+    
     if not config:
-        # Return default environment keys
+        # Return empty keys - force user to configure in settings panel
         return {
-            "kite_api_key": os.getenv("KITE_API_KEY"),
-            "kite_api_secret": os.getenv("KITE_API_SECRET"),
-            "kite_access_token": os.getenv("KITE_ACCESS_TOKEN"),
-            "claude_api_key": os.getenv("ANTHROPIC_API_KEY"),
-            "perplexity_api_key": os.getenv("PERPLEXITY_API_KEY"),
-            "openai_api_key": os.getenv("OPENAI_API_KEY")
+            "kite_api_key": None,
+            "kite_api_secret": None,
+            "kite_access_token": None,
+            "claude_api_key": None
         }
     else:
-        # Return user-provided keys
+        # Return user-provided keys only
         return {
             "kite_api_key": config.kite_api_key,
             "kite_api_secret": config.kite_api_secret,
             "kite_access_token": config.kite_access_token,
-            "claude_api_key": config.claude_api_key,
-            "perplexity_api_key": config.perplexity_api_key,
-            "openai_api_key": config.openai_api_key
+            "claude_api_key": config.claude_api_key
         }
 
 @router.get("/deployment-info")
@@ -155,8 +146,8 @@ async def get_deployment_info():
         "deployment_mode": "multi-user" if os.getenv("MULTI_USER_MODE") == "true" else "single-user",
         "features": {
             "user_api_keys": True,
-            "kite_connect": bool(os.getenv("KITE_API_KEY")) or bool(user_api_keys),
-            "openai_integration": False,  # Coming soon
+            "kite_connect": bool(user_api_keys),
+            "claude_integration": True,
             "real_time_data": True,
             "dcf_valuation": True
         },

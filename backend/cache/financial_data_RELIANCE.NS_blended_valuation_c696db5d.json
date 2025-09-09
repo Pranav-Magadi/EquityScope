@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-09-09T12:38:09.765089",
+  "cache_type": "financial_data",
+  "identifier": "RELIANCE.NS_blended_valuation",
+  "data": {
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "is_conglomerate": true,
+    "segment_valuations": [
+      {
+        "business_segment": {
+          "sector": "SectorCategory.ENERGY",
+          "sub_industry": "Oil & Gas Exploration",
+          "estimated_revenue_contribution": 46.19332763045338,
+          "confidence_level": 42.85714285714286,
+          "keywords_found": [
+            "oil",
+            "gas",
+            "refining",
+            "energy",
+            "fuel"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 5184203536726.434,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      },
+      {
+        "business_segment": {
+          "sector": "SectorCategory.CHEMICALS",
+          "sub_industry": "General",
+          "estimated_revenue_contribution": 27.71599657827203,
+          "confidence_level": 36.0,
+          "keywords_found": [
+            "chemical",
+            "specialty",
+            "polymer"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 3049531492192.0195,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      },
+      {
+        "business_segment": {
+          "sector": "SectorCategory.FMCG",
+          "sub_industry": "Personal Care",
+          "estimated_revenue_contribution": 19.247219846022244,
+          "confidence_level": 40.0,
+          "keywords_found": [
+            "retail",
+            "consumer",
+            "supermarket",
+            "store"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 2117730202911.1245,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      },
+      {
+        "business_segment": {
+          "sector": "SectorCategory.IT",
+          "sub_industry": "IT Services",
+          "estimated_revenue_contribution": 6.8434559452523525,
+          "confidence_level": 24.0,
+          "keywords_found": [
+            "digital",
+            "platform"
+          ]
+        },
+        "sector_multiples": {
+          "sector": "GENERAL",
+          "pe_ratio": 15,
+          "pb_ratio": 2,
+          "ev_ebitda": 10,
+          "ev_revenue": 2,
+          "roe_premium": 0.0,
+          "confidence_level": 40
+        },
+        "estimated_segment_value": 715322201872.202,
+        "valuation_approach": "P/E Ratio",
+        "confidence_score": 40
+      }
+    ],
+    "blended_pe_multiple": 15.000000000000002,
+    "blended_ev_ebitda_multiple": 10.0,
+    "pure_play_discount": 15.0,
+    "sum_of_parts_value": 11066787433701.78,
+    "discounted_sotp_value": 9406769318646.512,
+    "current_market_value": 18580122894336,
+    "valuation_gap": -49.37186706383901,
+    "valuation_confidence": 40.0,
+    "data_warnings": [],
+    "methodology_notes": [
+      "Oil, Gas & Energy: 46.2% contribution, using P/E Ratio approach",
+      "Chemicals & Fertilizers: 27.7% contribution, using P/E Ratio approach",
+      "Fast Moving Consumer Goods: 19.2% contribution, using P/E Ratio approach",
+      "Information Technology: 6.8% contribution, using P/E Ratio approach"
+    ],
+    "analysis_date": "2025-09-09 12:38:09.764918",
+    "last_updated": "2025-09-09 12:38:09.764920"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_RELIANCE.NS_blended_valuation_c696db5d"
+  }
+}

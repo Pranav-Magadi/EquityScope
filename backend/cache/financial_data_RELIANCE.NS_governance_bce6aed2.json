@@ -1,0 +1,245 @@
+{
+  "timestamp": "2025-09-09T13:17:06.771566",
+  "cache_type": "financial_data",
+  "identifier": "RELIANCE.NS_governance",
+  "data": {
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "analysis_date": "2025-09-09 13:17:06.771138",
+    "latest_shareholding": {
+      "date": "2025-09-09 13:17:06.129362",
+      "promoter_percentage": 21.187035051763175,
+      "fii_percentage": 15,
+      "dii_percentage": 15,
+      "public_percentage": 48.812964948236825,
+      "pledged_percentage": 0.0
+    },
+    "shareholding_history": [
+      {
+        "date": "2025-09-09 13:17:06.129366",
+        "promoter_percentage": 21.314018131043163,
+        "fii_percentage": 15.063491539639994,
+        "dii_percentage": 15.063491539639994,
+        "public_percentage": 48.78756833238083,
+        "pledged_percentage": 0.0380949237839968
+      },
+      {
+        "date": "2025-06-11 13:17:06.129375",
+        "promoter_percentage": 21.724173225433592,
+        "fii_percentage": 15.268569086835209,
+        "dii_percentage": 15.268569086835209,
+        "public_percentage": 48.70553731350274,
+        "pledged_percentage": 0.16114145210112527
+      },
+      {
+        "date": "2025-03-13 13:17:06.129379",
+        "promoter_percentage": 20.63049397499603,
+        "fii_percentage": 14.721729461616427,
+        "dii_percentage": 14.721729461616427,
+        "public_percentage": 48.92427316359026,
+        "pledged_percentage": 0
+      },
+      {
+        "date": "2024-12-13 13:17:06.129381",
+        "promoter_percentage": 20.687117167976943,
+        "fii_percentage": 14.750041058106884,
+        "dii_percentage": 14.750041058106884,
+        "public_percentage": 48.91294852499407,
+        "pledged_percentage": 0
+      },
+      {
+        "date": "2024-09-14 13:17:06.129384",
+        "promoter_percentage": 20.374679569079948,
+        "fii_percentage": 14.593822258658387,
+        "dii_percentage": 14.593822258658387,
+        "public_percentage": 48.975436044773474,
+        "pledged_percentage": 0
+      },
+      {
+        "date": "2024-06-16 13:17:06.129386",
+        "promoter_percentage": 21.54680881953855,
+        "fii_percentage": 15.179886883887688,
+        "dii_percentage": 15.179886883887688,
+        "public_percentage": 48.74101019468175,
+        "pledged_percentage": 0.10793213033261288
+      },
+      {
+        "date": "2024-03-18 13:17:06.129389",
+        "promoter_percentage": 21.869086249836524,
+        "fii_percentage": 15.341025599036675,
+        "dii_percentage": 15.341025599036675,
+        "public_percentage": 48.676554708622156,
+        "pledged_percentage": 0.20461535942200487
+      },
+      {
+        "date": "2023-12-19 13:17:06.129392",
+        "promoter_percentage": 20.878548510040876,
+        "fii_percentage": 14.84575672913885,
+        "dii_percentage": 14.84575672913885,
+        "public_percentage": 48.87466225658129,
+        "pledged_percentage": 0
+      }
+    ],
+    "dividend_history": [
+      {
+        "ex_date": "2025-08-14 00:00:00+05:30",
+        "record_date": "2025-08-15 00:00:00+05:30",
+        "dividend_per_share": 5.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2024-08-19 00:00:00+05:30",
+        "record_date": "2024-08-20 00:00:00+05:30",
+        "dividend_per_share": 5.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2023-08-21 00:00:00+05:30",
+        "record_date": "2023-08-22 00:00:00+05:30",
+        "dividend_per_share": 4.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2022-08-18 00:00:00+05:30",
+        "record_date": "2022-08-19 00:00:00+05:30",
+        "dividend_per_share": 4.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2021-06-11 00:00:00+05:30",
+        "record_date": "2021-06-12 00:00:00+05:30",
+        "dividend_per_share": 3.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2020-07-02 00:00:00+05:30",
+        "record_date": "2020-07-03 00:00:00+05:30",
+        "dividend_per_share": 3.25,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2019-08-02 00:00:00+05:30",
+        "record_date": "2019-08-03 00:00:00+05:30",
+        "dividend_per_share": 3.219483,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2018-06-27 00:00:00+05:30",
+        "record_date": "2018-06-28 00:00:00+05:30",
+        "dividend_per_share": 2.97183,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2017-07-13 00:00:00+05:30",
+        "record_date": "2017-07-14 00:00:00+05:30",
+        "dividend_per_share": 2.724178,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2016-03-17 00:00:00+05:30",
+        "record_date": "2016-03-18 00:00:00+05:30",
+        "dividend_per_share": 2.600351,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2015-05-08 00:00:00+05:30",
+        "record_date": "2015-05-09 00:00:00+05:30",
+        "dividend_per_share": 2.476525,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2014-05-16 00:00:00+05:30",
+        "record_date": "2014-05-17 00:00:00+05:30",
+        "dividend_per_share": 2.352699,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2013-05-10 00:00:00+05:30",
+        "record_date": "2013-05-11 00:00:00+05:30",
+        "dividend_per_share": 2.228873,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2012-05-31 00:00:00+05:30",
+        "record_date": "2012-06-01 00:00:00+05:30",
+        "dividend_per_share": 2.105046,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2011-05-05 00:00:00+05:30",
+        "record_date": "2011-05-06 00:00:00+05:30",
+        "dividend_per_share": 1.98122,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2010-05-10 00:00:00+05:30",
+        "record_date": "2010-05-11 00:00:00+05:30",
+        "dividend_per_share": 1.733568,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2009-10-16 00:00:00+05:30",
+        "record_date": "2009-10-17 00:00:00+05:30",
+        "dividend_per_share": 1.609741,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2008-05-08 00:00:00+05:30",
+        "record_date": "2008-05-09 00:00:00+05:30",
+        "dividend_per_share": 1.609741,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2007-03-21 00:00:00+05:30",
+        "record_date": "2007-03-22 00:00:00+05:30",
+        "dividend_per_share": 1.362089,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2006-06-01 00:00:00+05:30",
+        "record_date": "2006-06-02 00:00:00+05:30",
+        "dividend_per_share": 1.238263,
+        "dividend_type": "regular",
+        "announcement_date": null
+      }
+    ],
+    "dividend_yield_ttm": 1.3784097504352872,
+    "dividend_payout_ratio": 31.540504648074368,
+    "governance_metrics": {
+      "promoter_stability_score": 97.5257510157465,
+      "pledging_risk_score": 10.0,
+      "dividend_consistency_score": 100,
+      "transparency_score": 75.0,
+      "overall_governance_score": 91.75772530472395
+    },
+    "simple_mode_summary": "Low promoter holding at 21.2% may indicate dispersed ownership. No promoter pledging indicates strong financial position. Consistent dividend payments over 20 years demonstrates shareholder-friendly policy. Strong corporate governance practices.",
+    "data_warnings": [
+      "Note: Some governance data estimated due to API limitations"
+    ],
+    "last_updated": "2025-09-09 13:17:06.771142",
+    "agentic_mode_interpretation": null
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_RELIANCE.NS_governance_bce6aed2"
+  }
+}

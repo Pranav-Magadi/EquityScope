@@ -5,6 +5,22 @@ All notable changes to EquityScope will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-09-09
+
+### Fixed
+- **yfinance Upgrade**: Updated from v0.2.28 to v0.2.65
+  - Resolved Yahoo Finance API compatibility issues causing 400/404 errors
+  - Fixed v3 summary endpoints that were failing due to rate limiting
+  - Added new dependencies: curl-cffi, protobuf, peewee, platformdirs
+  - Improved data reliability and error handling
+- **WebSockets**: Updated from v12.0 to v15.0.1 for better compatibility
+- **API Stability**: Enhanced error handling for external data source failures
+
+### Changed
+- Updated requirements.txt with latest yfinance dependencies
+- Enhanced README.md with troubleshooting section for yfinance issues
+- Improved data source reliability documentation
+
 ## [1.0.0] - 2025-09-08
 
 ### Added

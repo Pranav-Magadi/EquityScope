@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-09-09T13:17:05.842439",
+  "cache_type": "market_data",
+  "identifier": "india_10y_gsec",
+  "data": 0.065,
+  "metadata": {
+    "ttl_hours": 1,
+    "cache_key": "market_data_india_10y_gsec_79a98dd0",
+    "calculation_type": "risk_free_rate"
+  }
+}

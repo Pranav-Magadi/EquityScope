@@ -1,0 +1,245 @@
+{
+  "timestamp": "2025-09-09T12:51:02.648785",
+  "cache_type": "financial_data",
+  "identifier": "INFY.NS_governance",
+  "data": {
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "analysis_date": "2025-09-09 12:51:02.647673",
+    "latest_shareholding": {
+      "date": "2025-09-09 12:50:50.668577",
+      "promoter_percentage": 0,
+      "fii_percentage": 15,
+      "dii_percentage": 15,
+      "public_percentage": 85.39761504414935,
+      "pledged_percentage": 0.0
+    },
+    "shareholding_history": [
+      {
+        "date": "2025-09-09 12:50:50.668584",
+        "promoter_percentage": 0,
+        "fii_percentage": 14.33490753884032,
+        "dii_percentage": 14.33490753884032,
+        "public_percentage": 50,
+        "pledged_percentage": 0
+      },
+      {
+        "date": "2025-06-11 12:50:50.668594",
+        "promoter_percentage": 0,
+        "fii_percentage": 14.701174505512226,
+        "dii_percentage": 14.701174505512226,
+        "public_percentage": 50,
+        "pledged_percentage": 0
+      },
+      {
+        "date": "2025-03-13 12:50:50.668598",
+        "promoter_percentage": 0.49193087946509817,
+        "fii_percentage": 15.245965439732549,
+        "dii_percentage": 15.245965439732549,
+        "public_percentage": 50,
+        "pledged_percentage": 0.14757926383952943
+      },
+      {
+        "date": "2024-12-13 12:50:50.668600",
+        "promoter_percentage": 0,
+        "fii_percentage": 14.876956037641895,
+        "dii_percentage": 14.876956037641895,
+        "public_percentage": 50,
+        "pledged_percentage": 0
+      },
+      {
+        "date": "2024-09-14 12:50:50.668603",
+        "promoter_percentage": 0.34626577594086183,
+        "fii_percentage": 15.17313288797043,
+        "dii_percentage": 15.17313288797043,
+        "public_percentage": 50,
+        "pledged_percentage": 0.10387973278225855
+      },
+      {
+        "date": "2024-06-16 12:50:50.668605",
+        "promoter_percentage": 0.736261772301099,
+        "fii_percentage": 15.36813088615055,
+        "dii_percentage": 15.36813088615055,
+        "public_percentage": 50,
+        "pledged_percentage": 0.2208785316903297
+      },
+      {
+        "date": "2024-03-18 12:50:50.668607",
+        "promoter_percentage": 0.7923796375647225,
+        "fii_percentage": 15.39618981878236,
+        "dii_percentage": 15.39618981878236,
+        "public_percentage": 50,
+        "pledged_percentage": 0.23771389126941675
+      },
+      {
+        "date": "2023-12-19 12:50:50.668609",
+        "promoter_percentage": 0.4117084456272096,
+        "fii_percentage": 15.205854222813604,
+        "dii_percentage": 15.205854222813604,
+        "public_percentage": 50,
+        "pledged_percentage": 0.12351253368816287
+      }
+    ],
+    "dividend_history": [
+      {
+        "ex_date": "2025-05-30 00:00:00+05:30",
+        "record_date": "2025-05-31 00:00:00+05:30",
+        "dividend_per_share": 22.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2024-10-29 00:00:00+05:30",
+        "record_date": "2024-10-30 00:00:00+05:30",
+        "dividend_per_share": 21.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2024-05-31 00:00:00+05:30",
+        "record_date": "2024-06-01 00:00:00+05:30",
+        "dividend_per_share": 20.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2023-10-25 00:00:00+05:30",
+        "record_date": "2023-10-26 00:00:00+05:30",
+        "dividend_per_share": 18.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2023-06-02 00:00:00+05:30",
+        "record_date": "2023-06-03 00:00:00+05:30",
+        "dividend_per_share": 17.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2022-10-27 00:00:00+05:30",
+        "record_date": "2022-10-28 00:00:00+05:30",
+        "dividend_per_share": 16.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2022-05-31 00:00:00+05:30",
+        "record_date": "2022-06-01 00:00:00+05:30",
+        "dividend_per_share": 16.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2021-10-26 00:00:00+05:30",
+        "record_date": "2021-10-27 00:00:00+05:30",
+        "dividend_per_share": 15.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2021-05-31 00:00:00+05:30",
+        "record_date": "2021-06-01 00:00:00+05:30",
+        "dividend_per_share": 15.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2020-10-23 00:00:00+05:30",
+        "record_date": "2020-10-24 00:00:00+05:30",
+        "dividend_per_share": 12.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2020-05-29 00:00:00+05:30",
+        "record_date": "2020-05-30 00:00:00+05:30",
+        "dividend_per_share": 9.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2019-10-23 00:00:00+05:30",
+        "record_date": "2019-10-24 00:00:00+05:30",
+        "dividend_per_share": 8.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2019-06-13 00:00:00+05:30",
+        "record_date": "2019-06-14 00:00:00+05:30",
+        "dividend_per_share": 10.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2018-10-25 00:00:00+05:30",
+        "record_date": "2018-10-26 00:00:00+05:30",
+        "dividend_per_share": 7.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2018-06-14 00:00:00+05:30",
+        "record_date": "2018-06-15 00:00:00+05:30",
+        "dividend_per_share": 10.25,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2017-10-31 00:00:00+05:30",
+        "record_date": "2017-11-01 00:00:00+05:30",
+        "dividend_per_share": 6.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2017-06-01 00:00:00+05:30",
+        "record_date": "2017-06-02 00:00:00+05:30",
+        "dividend_per_share": 7.375,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2016-10-21 00:00:00+05:30",
+        "record_date": "2016-10-22 00:00:00+05:30",
+        "dividend_per_share": 5.5,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2016-06-09 00:00:00+05:30",
+        "record_date": "2016-06-10 00:00:00+05:30",
+        "dividend_per_share": 7.125,
+        "dividend_type": "regular",
+        "announcement_date": null
+      },
+      {
+        "ex_date": "2015-10-16 00:00:00+05:30",
+        "record_date": "2015-10-17 00:00:00+05:30",
+        "dividend_per_share": 5.0,
+        "dividend_type": "regular",
+        "announcement_date": null
+      }
+    ],
+    "dividend_yield_ttm": 5.3971215351812365,
+    "dividend_payout_ratio": 119.25795053003534,
+    "governance_metrics": {
+      "promoter_stability_score": 68.08406109156019,
+      "pledging_risk_score": 10.0,
+      "dividend_consistency_score": 100,
+      "transparency_score": 75.0,
+      "overall_governance_score": 82.92521832746806
+    },
+    "simple_mode_summary": "Low promoter holding at 0.0% may indicate dispersed ownership. No promoter pledging indicates strong financial position. Consistent dividend payments over 11 years demonstrates shareholder-friendly policy. Strong corporate governance practices.",
+    "data_warnings": [
+      "Note: Some governance data estimated due to API limitations"
+    ],
+    "last_updated": "2025-09-09 12:51:02.647675",
+    "agentic_mode_interpretation": null
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_INFY.NS_governance_d7b77d0e"
+  }
+}

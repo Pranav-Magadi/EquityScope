@@ -4,13 +4,14 @@ import logging
 from ..services.technical_analysis import technical_analysis_service
 from ..services.claude_service import ClaudeService
 
-router = APIRouter(prefix="/api/v2", tags=["Technical Analysis"])
+router = APIRouter(prefix="/api", tags=["Technical Analysis"])
 logger = logging.getLogger(__name__)
 
-@router.get("/technical-analysis/{ticker}")
+@router.get("/valuation/{ticker}/technical-analysis")
 async def get_technical_analysis(
     ticker: str,
-    period: str = Query(default="1y", regex="^(3mo|6mo|1y|3y)$")
+    period: str = Query(default="1y", regex="^(3mo|6mo|1y|3y)$"),
+    mode: str = Query(default="simple", regex="^(simple|agentic)$")
 ):
     """Get real technical analysis with professional indicators"""
     try:
@@ -21,8 +22,12 @@ async def get_technical_analysis(
         if not tech_data:
             raise HTTPException(status_code=404, detail=f"Technical analysis data not found for ticker: {ticker}")
         
-        # Add AI summary using Claude service
-        tech_data['ai_summary'] = await generate_ai_summary(tech_data, ticker)
+        # Add AI summary only for agentic mode
+        if mode == "agentic":
+            tech_data['ai_summary'] = await generate_ai_summary(tech_data, ticker)
+        else:
+            # Simple mode doesn't need AI summary
+            tech_data['ai_summary'] = None
         
         return tech_data
         
@@ -33,14 +38,14 @@ async def get_technical_analysis(
 async def generate_ai_summary(data: Dict[str, Any], ticker: str) -> str:
     """Generate AI-powered summary for technical analysis using Claude"""
     try:
-        # Initialize Claude service
+        # Initialize fresh Claude service to get latest API keys
         claude_service = ClaudeService()
         
         # Try to get AI-powered summary first
         if claude_service.is_available():
             try:
                 logger.info(f"Generating Claude AI summary for {ticker} technical analysis")
-                ai_summary = await claude_service.technical_analyst_agent(data.get('indicator_values', {}))
+                ai_summary = await claude_service.technical_analyst_agent(data.get('indicator_values', {}), ticker)
                 if ai_summary:
                     return ai_summary
                 else:

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-09-09T12:49:53.786867",
+  "cache_type": "ai_insights",
+  "identifier": "INFY.NS",
+  "data": {
+    "headlines": [
+      "Infosys Limited reports quarterly results amid technology sector trends",
+      "Analysts maintain coverage on INFY.NS with sector-specific outlook",
+      "Technology sector dynamics impact Infosys Limited performance",
+      "Market volatility affects INFY.NS amid broader technology trends"
+    ],
+    "sentiment_score": -0.08132904084495358,
+    "sentiment_label": "Neutral",
+    "news_count": 4,
+    "last_updated": "2025-09-09T12:49:53.786838"
+  },
+  "metadata": {
+    "ttl_hours": 6.0,
+    "cache_key": "ai_insights_INFY.NS_9c503936",
+    "analysis_type": "claude_sentiment"
+  }
+}

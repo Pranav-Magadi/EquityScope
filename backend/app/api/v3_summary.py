@@ -53,7 +53,11 @@ async def get_simple_summary(
         
     except ValueError as e:
         logger.error(f"Invalid ticker {ticker}: {e}")
-        raise HTTPException(status_code=400, detail=f"Invalid ticker: {str(e)}")
+        # Check if it's a rate limiting error
+        if "rate limiting" in str(e).lower() or "temporarily unavailable" in str(e).lower():
+            raise HTTPException(status_code=503, detail=f"Service temporarily unavailable: {str(e)}")
+        else:
+            raise HTTPException(status_code=400, detail=f"Invalid ticker: {str(e)}")
     except Exception as e:
         logger.error(f"Error generating simple summary for {ticker}: {e}")
         raise HTTPException(status_code=500, detail=f"Analysis failed: {str(e)}")

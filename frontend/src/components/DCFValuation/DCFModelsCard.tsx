@@ -3185,7 +3185,7 @@ export const DCFModelsCard: React.FC<DCFModelsCardProps> = ({
                             <div className="space-y-3">
                               <div className="text-red-700 mb-2">{aiInsights.error_message}</div>
                               <div className="text-sm text-red-600">
-                                Configure your Claude or Perplexity API key in Settings to unlock sophisticated DCF insights including:
+                                Configure your Claude API key in Settings to unlock sophisticated DCF insights including:
                                 <ul className="list-disc ml-5 mt-2 space-y-1">
                                   <li>AI Investment Thesis Summary</li>
                                   <li>Industry & Macro Signals Analysis</li>

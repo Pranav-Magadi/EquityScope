@@ -12,13 +12,17 @@ router = APIRouter(prefix="/api/company", tags=["company"])
 async def get_basic_company_data(ticker: str):
     """Get basic company info and stock price without AI analysis"""
     try:
+        # Use enhanced data service for better data availability
+        from ..services.enhanced_data_service import get_enhanced_data_service
+        enhanced_service = get_enhanced_data_service()
+        
         # Fetch company info
-        company_info = DataService.get_company_info(ticker)
+        company_info = await enhanced_service.get_company_info(ticker)
         if not company_info:
             raise HTTPException(status_code=404, detail=f"Company data not found for ticker: {ticker}")
         
         # Fetch stock price
-        stock_price = DataService.get_stock_price(ticker)
+        stock_price = await enhanced_service.get_stock_price(ticker)
         if not stock_price:
             raise HTTPException(status_code=404, detail=f"Stock price data not found for ticker: {ticker}")
         

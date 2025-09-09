@@ -19,8 +19,9 @@ from .api.v1.financial_analysis import router as financial_analysis_router
 from .api.dcf_insights import router as dcf_insights_router
 from .api.news_analysis import router as news_analysis_router
 from .routers.valuation_models import router as valuation_models_router
-# from .api.enhanced_company import router as enhanced_company_router
+from .api.enhanced_company import router as enhanced_company_router
 # from .api.enhanced_valuation import router as enhanced_valuation_router
+from .services.enhanced_data_service import get_enhanced_data_service
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -76,8 +77,8 @@ app.include_router(financial_analysis_router, prefix="/api")
 # Valuation Models APIs (Multiple Models Comparison)
 app.include_router(valuation_models_router)
 
-# V2 APIs (enhanced with Kite Connect) - Disabled for Standard Mode
-# app.include_router(enhanced_company_router)
+# V2 APIs (enhanced with Kite Connect) - Enabled with API keys
+app.include_router(enhanced_company_router)
 # app.include_router(enhanced_valuation_router)
 
 @app.get("/")
@@ -160,6 +161,17 @@ async def get_data_sources_info():
             "note": "Currently uses placeholder functions - integrate with AI services in production"
         }
     }
+
+@app.on_event("startup")
+async def startup_event():
+    """Initialize services on startup"""
+    logger.info("Starting EquityScope API...")
+    
+    # Initialize enhanced data service (includes Kite Connect)
+    enhanced_service = get_enhanced_data_service()
+    await enhanced_service.initialize()
+    
+    logger.info("EquityScope API startup complete")
 
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request, exc):

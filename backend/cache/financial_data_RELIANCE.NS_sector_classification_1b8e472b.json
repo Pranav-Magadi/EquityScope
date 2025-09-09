@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-09-09T12:36:23.807285",
+  "cache_type": "financial_data",
+  "identifier": "RELIANCE.NS_sector_classification",
+  "data": {
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "primary_sector": "SectorCategory.ENERGY",
+    "sub_industry": "Oil & Gas Exploration",
+    "industry_group": "Oil & Gas Refining & Marketing",
+    "business_segments": [
+      {
+        "sector": "SectorCategory.ENERGY",
+        "sub_industry": "Oil & Gas Exploration",
+        "estimated_revenue_contribution": 46.19332763045338,
+        "confidence_level": 42.85714285714286,
+        "keywords_found": [
+          "oil",
+          "gas",
+          "refining",
+          "energy",
+          "fuel"
+        ]
+      },
+      {
+        "sector": "SectorCategory.CHEMICALS",
+        "sub_industry": "General",
+        "estimated_revenue_contribution": 27.71599657827203,
+        "confidence_level": 36.0,
+        "keywords_found": [
+          "chemical",
+          "specialty",
+          "polymer"
+        ]
+      },
+      {
+        "sector": "SectorCategory.FMCG",
+        "sub_industry": "Personal Care",
+        "estimated_revenue_contribution": 19.247219846022244,
+        "confidence_level": 40.0,
+        "keywords_found": [
+          "retail",
+          "consumer",
+          "supermarket",
+          "store"
+        ]
+      },
+      {
+        "sector": "SectorCategory.IT",
+        "sub_industry": "IT Services",
+        "estimated_revenue_contribution": 6.8434559452523525,
+        "confidence_level": 24.0,
+        "keywords_found": [
+          "digital",
+          "platform"
+        ]
+      }
+    ],
+    "is_conglomerate": true,
+    "classification_confidence": 72.0,
+    "business_keywords": [
+      "retail",
+      "energy",
+      "chemical",
+      "textile",
+      "consumer"
+    ],
+    "revenue_segments": [
+      "Retail",
+      "Oil to Chemicals",
+      "worldwide",
+      "Oil and Gas"
+    ],
+    "market_cap_category": "Large Cap",
+    "listing_exchange": "NSE",
+    "direct_peers": [],
+    "sector_peers": [],
+    "data_sources": [
+      "yfinance",
+      "business_analysis"
+    ],
+    "classification_date": "2025-09-09 12:36:23.807167",
+    "last_updated": "2025-09-09 12:36:23.807169"
+  },
+  "metadata": {
+    "ttl_hours": 24.0,
+    "cache_key": "financial_data_RELIANCE.NS_sector_classification_1b8e472b"
+  }
+}
